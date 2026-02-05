@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.H2Dialect
+  
+  h2:
+    console:
+      enabled: false
+
+jwt:
+  secret: test-secret-key-that-is-long-enough-for-hs512-algorithm-minimum-512-bits
+  expiration: 86400000
+
+logging:
+  level:
+    root: ERROR
+    com.fullstack: DEBUG
