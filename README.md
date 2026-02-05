@@ -1,4 +1,4 @@
-# 🚀 Full-Stack Java Enterprise Applications Portfolio
+# Full-Stack Java Enterprise Applications Portfolio
 
 [![Java](https://img.shields.io/badge/Java-17-orange.svg)](https://www.oracle.com/java/)
 [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.4.5-brightgreen.svg)](https://spring.io/projects/spring-boot)
@@ -8,7 +8,7 @@
 
 > A comprehensive collection of production-ready, enterprise-grade full-stack applications demonstrating modern software architecture, clean code principles, and industry best practices.
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Overview](#overview)
 - [Projects](#projects)
@@ -21,7 +21,7 @@
 - [Deployment](#deployment)
 - [Contributing](#contributing)
 
-## 🎯 Overview
+## Overview
 
 This repository showcases **four enterprise-level full-stack applications** built with modern technologies and following industry best practices. Each application demonstrates:
 
@@ -33,9 +33,9 @@ This repository showcases **four enterprise-level full-stack applications** buil
 - **Comprehensive Testing** with unit and integration tests
 - **Professional Documentation** for easy onboarding
 
-## 📦 Projects
+## Projects
 
-### 1. 🛒 E-Commerce Platform
+### 1. E-Commerce Platform
 **Port:** 3001 (Frontend) | 8081 (Backend)
 
 A fully-featured online shopping platform with product management, shopping cart, and order processing.
@@ -49,11 +49,11 @@ A fully-featured online shopping platform with product management, shopping cart
 
 **Use Cases:** B2C retail, marketplace platforms, inventory management
 
-[📖 Detailed Documentation](./e-commerce/README.md)
+[Detailed Documentation](./e-commerce/README.md)
 
 ---
 
-### 2. 🍔 Food Ordering System
+### 2. Food Ordering System
 **Port:** 3002 (Frontend) | 8082 (Backend)
 
 A restaurant ordering platform enabling customers to browse menus, place orders, and track delivery.
@@ -67,11 +67,11 @@ A restaurant ordering platform enabling customers to browse menus, place orders,
 
 **Use Cases:** Food delivery apps, restaurant chains, cloud kitchens
 
-[📖 Detailed Documentation](./food-ordering/README.md)
+[Detailed Documentation](./food-ordering/README.md)
 
 ---
 
-### 3. 🎫 Event Booking Platform
+### 3. Event Booking Platform
 **Port:** 3003 (Frontend) | 8083 (Backend)
 
 An event management system for creating, discovering, and booking events with seat management.
@@ -85,11 +85,11 @@ An event management system for creating, discovering, and booking events with se
 
 **Use Cases:** Concert ticketing, conference management, venue booking
 
-[📖 Detailed Documentation](./event-booking/README.md)
+[Detailed Documentation](./event-booking/README.md)
 
 ---
 
-### 4. 💼 Job Portal
+### 4. Job Portal
 **Port:** 3004 (Frontend) | 8084 (Backend)
 
 A professional job board connecting employers with job seekers, featuring application tracking.
@@ -103,11 +103,11 @@ A professional job board connecting employers with job seekers, featuring applic
 
 **Use Cases:** Recruitment platforms, corporate job boards, staffing agencies
 
-[📖 Detailed Documentation](./job-portal/README.md)
+[Detailed Documentation](./job-portal/README.md)
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Backend
 - **Framework:** Spring Boot 3.4.5
@@ -141,7 +141,7 @@ A professional job board connecting employers with job seekers, featuring applic
 - **Connection Pooling:** HikariCP
 - **Migrations:** Liquibase/Flyway ready
 
-## 🏗️ Architecture
+## Architecture
 
 ### System Architecture
 
@@ -216,46 +216,46 @@ Process Request
 Return Response
 ```
 
-## ✨ Features
+## Features
 
 ### Security Features
-- ✅ JWT-based stateless authentication
-- ✅ Role-based access control (RBAC)
-- ✅ Password encryption with BCrypt
-- ✅ CORS configuration for cross-origin requests
-- ✅ SQL injection prevention (JPA/Hibernate)
-- ✅ XSS protection headers
+- JWT-based stateless authentication
+- Role-based access control (RBAC)
+- Password encryption with BCrypt
+- CORS configuration for cross-origin requests
+- SQL injection prevention (JPA/Hibernate)
+- XSS protection headers
 
 ### Code Quality
-- ✅ Clean Architecture principles
-- ✅ SOLID design principles
-- ✅ DRY (Don't Repeat Yourself)
-- ✅ Comprehensive error handling
-- ✅ Input validation with Bean Validation
-- ✅ Professional logging
+- Clean Architecture principles
+- SOLID design principles
+- DRY (Don't Repeat Yourself)
+- Comprehensive error handling
+- Input validation with Bean Validation
+- Professional logging
 
 ### Database Features
-- ✅ JPA/Hibernate ORM
-- ✅ Database migrations ready
-- ✅ Connection pooling (HikariCP)
-- ✅ Transaction management
-- ✅ Cascade operations
+- JPA/Hibernate ORM
+- Database migrations ready
+- Connection pooling (HikariCP)
+- Transaction management
+- Cascade operations
 
 ### Testing
-- ✅ Unit tests for services
-- ✅ Integration tests for controllers
-- ✅ H2 in-memory database for testing
-- ✅ Mockito for mocking dependencies
-- ✅ Test coverage for critical paths
+- Unit tests for services
+- Integration tests for controllers
+- H2 in-memory database for testing
+- Mockito for mocking dependencies
+- Test coverage for critical paths
 
 ### DevOps
-- ✅ Multi-stage Dockerfiles for optimization
-- ✅ Docker Compose for orchestration
-- ✅ Environment-specific configurations
-- ✅ Health check endpoints
-- ✅ Graceful shutdown support
+- Multi-stage Dockerfiles for optimization
+- Docker Compose for orchestration
+- Environment-specific configurations
+- Health check endpoints
+- Graceful shutdown support
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -317,7 +317,7 @@ cd job-portal/frontend && npm install && npm start
 | Event Booking | http://localhost:3003 | http://localhost:8083 |
 | Job Portal | http://localhost:3004 | http://localhost:8084 |
 
-## 📚 API Documentation
+## API Documentation
 
 ### Authentication Endpoints
 
@@ -366,7 +366,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIs...
 
 For detailed API documentation of each service, see individual project READMEs.
 
-## 🧪 Testing
+## Testing
 
 ### Run All Tests
 
@@ -391,7 +391,7 @@ npm run test:e2e
 - **Repository Tests:** Data access layer
 - **Security Tests:** Authentication and authorization
 
-## 🐳 Docker Details
+## Docker Details
 
 ### Multi-Stage Build Strategy
 
@@ -414,7 +414,7 @@ services:
   - *-frontend: 4 React applications (Nginx)
 ```
 
-## 📖 Project Documentation
+## Project Documentation
 
 Each project includes comprehensive documentation:
 
@@ -424,7 +424,7 @@ Each project includes comprehensive documentation:
 - **SETUP.md:** Detailed setup instructions
 - **CONTRIBUTING.md:** Contribution guidelines
 
-## 🤝 Contributing
+## Contributing
 
 This is a portfolio project, but feedback and suggestions are welcome!
 
@@ -434,11 +434,11 @@ This is a portfolio project, but feedback and suggestions are welcome!
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📝 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 👤 Author
+## Author
 
 **[Your Name]**
 
@@ -446,7 +446,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
 - Email: your.email@example.com
 
-## 🌟 Acknowledgments
+## Acknowledgments
 
 - Spring Boot Team for excellent framework
 - React Team for powerful UI library
@@ -454,6 +454,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Made with ❤️ for learning and professional growth**
+**Made for learning and professional growth**
 
 *This repository demonstrates proficiency in full-stack development, microservices architecture, and modern DevOps practices.*
