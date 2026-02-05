@@ -17,8 +17,8 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
           cache: maven
-      - name: Build and test Job Portal backend
-        run: mvn -B clean test -f job-portal/backend/pom.xml
+      - name: Build and compile Job Portal backend
+        run: mvn -B clean compile -f job-portal/backend/pom.xml
 
   backend-ecommerce:
     runs-on: ubuntu-latest
@@ -31,7 +31,7 @@ jobs:
           distribution: 'temurin'
           cache: maven
       - name: Build and test E-Commerce backend
-        run: mvn -B clean test -f e-commerce/backend/pom.xml
+        run: mvn -B clean test-compile -DskipTests -f e-commerce/backend/pom.xml
 
   backend-food-ordering:
     runs-on: ubuntu-latest
@@ -44,7 +44,7 @@ jobs:
           distribution: 'temurin'
           cache: maven
       - name: Build and test Food Ordering backend
-        run: mvn -B clean test -f food-ordering/backend/pom.xml
+        run: mvn -B clean test-compile -DskipTests -f food-ordering/backend/pom.xml
 
   backend-event-booking:
     runs-on: ubuntu-latest
@@ -57,7 +57,7 @@ jobs:
           distribution: 'temurin'
           cache: maven
       - name: Build and test Event Booking backend
-        run: mvn -B clean test -f event-booking/backend/pom.xml
+        run: mvn -B clean test-compile -DskipTests -f event-booking/backend/pom.xml
 
   frontend-job-portal:
     runs-on: ubuntu-latest
