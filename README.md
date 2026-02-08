@@ -38,7 +38,7 @@ This repository showcases **four enterprise-level full-stack applications** buil
 ## Projects
 
 ### 1. E-Commerce Platform
-**Port:** 3001 (Frontend) | 8081 (Backend)
+**Port:** 3001 (Frontend) | 8082 (Backend)
 
 A fully-featured online shopping platform with product management, shopping cart, and order processing.
 
@@ -56,7 +56,7 @@ A fully-featured online shopping platform with product management, shopping cart
 ---
 
 ### 2. Food Ordering System
-**Port:** 3002 (Frontend) | 8082 (Backend)
+**Port:** 3002 (Frontend) | 8083 (Backend)
 
 A restaurant ordering platform enabling customers to browse menus, place orders, and track delivery.
 
@@ -74,7 +74,7 @@ A restaurant ordering platform enabling customers to browse menus, place orders,
 ---
 
 ### 3. Event Booking Platform
-**Port:** 3003 (Frontend) | 8083 (Backend)
+**Port:** 3003 (Frontend) | 8084 (Backend)
 
 An event management system for creating, discovering, and booking events with seat management.
 
@@ -92,7 +92,7 @@ An event management system for creating, discovering, and booking events with se
 ---
 
 ### 4. Job Portal
-**Port:** 3004 (Frontend) | 8084 (Backend)
+**Port:** 3000 (Frontend) | 8081 (Backend)
 
 A professional job board connecting employers with job seekers, featuring application tracking.
 
@@ -329,10 +329,10 @@ cd job-portal/frontend && npm install && npm start
 
 | Application | Frontend | Backend API |
 |------------|----------|-------------|
-| E-Commerce | http://localhost:3001 | http://localhost:8081 |
-| Food Ordering | http://localhost:3002 | http://localhost:8082 |
-| Event Booking | http://localhost:3003 | http://localhost:8083 |
-| Job Portal | http://localhost:3004 | http://localhost:8084 |
+| Job Portal | http://localhost:3000 | http://localhost:8081 |
+| E-Commerce | http://localhost:3001 | http://localhost:8082 |
+| Food Ordering | http://localhost:3002 | http://localhost:8083 |
+| Event Booking | http://localhost:3003 | http://localhost:8084 |
 
 ## API Documentation
 
@@ -459,45 +459,45 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 This portfolio demonstrates **production-ready, enterprise-level full-stack development skills** that employers value:
 
-### 🎯 **Technical Excellence**
+### Technical Excellence
 - **Full-Stack Proficiency:** Complete applications from database to UI
 - **Modern Tech Stack:** Latest versions of Spring Boot, React, PostgreSQL
 - **Clean Code:** Well-structured, maintainable code following best practices
 - **Security:** JWT authentication, role-based access, secure password handling
 - **Scalability:** Microservice-ready architecture, Docker containerization
 
-### 💼 **Real-World Applications**
+### Real-World Applications
 - **E-Commerce Platform:** Complete shopping experience with cart and orders
 - **Food Ordering System:** Multi-restaurant platform with order tracking
 - **Event Booking:** Ticket reservation system with seat management
 - **Job Portal:** Recruitment platform with advanced search and applications
 
-### 🎨 **Professional UI/UX**
+### Professional UI/UX
 - **Modern Design:** Clean, responsive interfaces that look professional
 - **User-Centric:** Intuitive navigation, clear feedback, smooth interactions
 - **Consistent Theming:** Unified design language across all modules
 - **Production-Ready:** Polished interfaces suitable for real-world use
 
-### 🏗️ **Architecture & Best Practices**
+### Architecture & Best Practices
 - **Layered Architecture:** Clear separation of concerns (Controller → Service → Repository)
 - **RESTful APIs:** Proper HTTP methods, status codes, and error handling
 - **Database Design:** Normalized schemas with proper relationships
 - **Error Handling:** Comprehensive exception handling and validation
 - **Documentation:** Well-documented code and API endpoints
 
-### 🚀 **DevOps & Deployment**
+### DevOps & Deployment
 - **Docker Support:** Containerized applications for easy deployment
 - **Environment Configuration:** Proper configuration management
 - **CI/CD Ready:** GitHub Actions compatible structure
 - **Easy Setup:** Simple local development workflow
 
-### 📊 **What Recruiters See**
-- ✅ Ability to build complete, working applications
-- ✅ Understanding of modern web development practices
-- ✅ Experience with enterprise-level technologies
-- ✅ Attention to detail and code quality
-- ✅ Full-stack capabilities (backend + frontend)
-- ✅ Production-ready mindset
+### What Recruiters See
+- Ability to build complete, working applications
+- Understanding of modern web development practices
+- Experience with enterprise-level technologies
+- Attention to detail and code quality
+- Full-stack capabilities (backend + frontend)
+- Production-ready mindset
 
 ## Problems This Project Solves
 
@@ -510,11 +510,13 @@ This portfolio demonstrates **production-ready, enterprise-level full-stack deve
 
 ## Author
 
-**[Your Name]**
+**Likith K**
 
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
-- Email: your.email@example.com
+- GitHub: [@Likith0111](https://github.com/Likith0111)
+- LinkedIn: [Likith K](https://linkedin.com/in/likithck)
+- Email: kancharlalikith@gmail.com
+- Phone: (513) 399-7502
+- Location: Phoenix, Arizona
 
 ## Acknowledgments
 
