@@ -15,7 +15,7 @@ export default function Layout() {
     <div className="min-vh-100 d-flex flex-column">
       <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
         <div className="container">
-          <Link className="navbar-brand" to="/">Job Portal</Link>
+          <Link className="navbar-brand" to="/">💼 Job Portal</Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -38,8 +38,11 @@ export default function Layout() {
             </ul>
             <ul className="navbar-nav">
               {user ? (
-                <li className="nav-item">
-                  <span className="nav-link">{user.name} ({user.role})</span>
+                <li className="nav-item d-flex align-items-center">
+                  <span className="nav-link mb-0">👤 {user.name}</span>
+                  <span className={`badge ms-1 ${user.role === 'ADMIN' ? 'bg-warning' : user.role === 'RECRUITER' ? 'bg-info' : 'bg-success'}`}>
+                    {user.role}
+                  </span>
                 </li>
               ) : null}
               {user ? (
@@ -54,7 +57,7 @@ export default function Layout() {
           </div>
         </div>
       </nav>
-      <main className="container flex-grow-1 py-4">
+      <main className="container flex-grow-1 py-5">
         <Outlet />
       </main>
     </div>

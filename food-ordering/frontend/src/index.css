@@ -1,15 +1,15 @@
-/* Modern Theme for Job Portal */
+/* Modern Theme for Food Ordering */
 :root {
-  --primary-color: #3b82f6;
-  --primary-dark: #2563eb;
-  --primary-light: #60a5fa;
-  --secondary-color: #8b5cf6;
+  --primary-color: #f59e0b;
+  --primary-dark: #d97706;
+  --primary-light: #fbbf24;
+  --secondary-color: #ef4444;
   --success-color: #10b981;
   --danger-color: #ef4444;
   --warning-color: #f59e0b;
   --info-color: #3b82f6;
   --dark-color: #1e293b;
-  --light-color: #eff6ff;
+  --light-color: #fef3c7;
   --gray-100: #f9fafb;
   --gray-200: #f3f4f6;
   --gray-300: #e5e7eb;
@@ -112,13 +112,13 @@ body {
   box-shadow: var(--shadow-md);
 }
 
-.btn-outline-primary {
-  border: 1px solid var(--primary-color);
-  color: var(--primary-color);
+.btn-outline-danger {
+  border: 1px solid var(--danger-color);
+  color: var(--danger-color);
 }
 
-.btn-outline-primary:hover {
-  background-color: var(--primary-color);
+.btn-outline-danger:hover {
+  background-color: var(--danger-color);
   color: white;
 }
 
@@ -147,7 +147,7 @@ body {
 
 .form-control:focus {
   border-color: var(--primary-color);
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
   outline: none;
 }
 
@@ -235,40 +235,88 @@ h2 {
   padding-right: 0.75rem;
 }
 
-/* Job Cards */
-.job-card {
-  padding: 1.5rem;
+/* Restaurant Cards */
+.restaurant-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.restaurant-card .card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.restaurant-card .card-title {
+  color: var(--primary-dark);
+  font-size: 1.25rem;
+}
+
+/* Menu Items */
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1.25rem;
   background: white;
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius);
   margin-bottom: 1rem;
   box-shadow: var(--shadow-sm);
   transition: var(--transition);
 }
 
-.job-card:hover {
+.menu-item:hover {
   box-shadow: var(--shadow-md);
   transform: translateX(4px);
 }
 
-.job-title {
+.menu-item-info {
+  flex: 1;
+}
+
+.menu-item-name {
   font-weight: 600;
-  font-size: 1.25rem;
-  color: var(--primary-dark);
+  font-size: 1.1rem;
+  color: var(--gray-900);
   margin-bottom: 0.5rem;
 }
 
-.job-meta {
-  font-size: 0.875rem;
-  color: var(--gray-600);
+.menu-item-price {
+  font-weight: 700;
+  color: var(--primary-dark);
+  font-size: 1.25rem;
 }
 
-/* Search Form */
-.search-form {
+.menu-item-description {
+  color: var(--gray-600);
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+/* Cart */
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
   background: white;
+  border-radius: var(--radius);
+  margin-bottom: 0.75rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.cart-total {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  color: white;
   padding: 1.5rem;
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
-  margin-bottom: 2rem;
+  margin-top: 1.5rem;
+}
+
+.cart-total-amount {
+  font-size: 2rem;
+  font-weight: 700;
 }
 
 /* Responsive */
@@ -280,8 +328,9 @@ h2 {
   .card-body {
     padding: 1rem;
   }
-}
-
-.whitespace-pre-wrap {
-  white-space: pre-wrap;
+  
+  .menu-item {
+    flex-direction: column;
+    gap: 1rem;
+  }
 }

@@ -44,43 +44,77 @@ export default function JobList() {
 
   return (
     <div>
-      <h2 className="mb-4">Job Search</h2>
-      <form className="card card-body mb-4" onSubmit={handleSearch}>
+      <div className="d-flex justify-content-between align-items-center mb-4">
+        <h2 className="mb-0">💼 Job Search</h2>
+        <span className="badge bg-primary">{jobs.length} {jobs.length === 1 ? 'Job' : 'Jobs'}</span>
+      </div>
+      
+      <form className="search-form" onSubmit={handleSearch}>
         <div className="row g-2">
           <div className="col-md-3">
-            <input type="text" name="location" className="form-control" placeholder="Location" />
+            <input type="text" name="location" className="form-control" placeholder="📍 Location" />
           </div>
           <div className="col-md-3">
-            <input type="text" name="roleType" className="form-control" placeholder="Role type" />
+            <input type="text" name="roleType" className="form-control" placeholder="💼 Role Type" />
           </div>
           <div className="col-md-2">
-            <input type="number" name="minExp" className="form-control" placeholder="Min exp (years)" min="0" />
+            <input type="number" name="minExp" className="form-control" placeholder="Min Experience" min="0" />
           </div>
           <div className="col-md-2">
-            <input type="number" name="maxExp" className="form-control" placeholder="Max exp (years)" min="0" />
+            <input type="number" name="maxExp" className="form-control" placeholder="Max Experience" min="0" />
           </div>
           <div className="col-md-2">
-            <button type="submit" className="btn btn-primary w-100">Search</button>
+            <button type="submit" className="btn btn-primary w-100">🔍 Search</button>
           </div>
         </div>
       </form>
-      <ul className="list-group">
-        {jobs.map(job => (
-          <li key={job.id} className="list-group-item d-flex justify-content-between align-items-center">
-            <div>
-              <Link to={`/jobs/${job.id}`} className="fw-bold">{job.title}</Link>
-              <div className="text-muted small">{job.location} | {job.roleType} | {job.minExperience}-{job.maxExperience} yrs</div>
+      
+      {jobs.length === 0 && !loading ? (
+        <div className="text-center py-5">
+          <div className="mb-3" style={{ fontSize: '4rem' }}>📋</div>
+          <h4 className="text-muted">No jobs found</h4>
+          <p className="text-muted">Try adjusting your search criteria</p>
+        </div>
+      ) : (
+        <>
+          {jobs.map(job => (
+            <div key={job.id} className="job-card">
+              <div className="d-flex justify-content-between align-items-start">
+                <div className="flex-grow-1">
+                  <Link to={`/jobs/${job.id}`} className="job-title text-decoration-none">
+                    {job.title}
+                  </Link>
+                  <div className="job-meta mt-2">
+                    📍 {job.location} | 💼 {job.roleType} | ⏱️ {job.minExperience}-{job.maxExperience} years experience
+                  </div>
+                </div>
+                <Link to={`/jobs/${job.id}`} className="btn btn-sm btn-outline-primary ms-3">
+                  View Details
+                </Link>
+              </div>
             </div>
-            <Link to={`/jobs/${job.id}`} className="btn btn-sm btn-outline-primary">View</Link>
-          </li>
-        ))}
-      </ul>
-      {totalPages > 1 && (
-        <nav className="mt-3">
-          <button className="btn btn-sm btn-outline-secondary me-2" disabled={page === 0} onClick={() => setPage(p => p - 1)}>Previous</button>
-          <span>Page {page + 1} of {totalPages}</span>
-          <button className="btn btn-sm btn-outline-secondary ms-2" disabled={page >= totalPages - 1} onClick={() => setPage(p => p + 1)}>Next</button>
-        </nav>
+          ))}
+          
+          {totalPages > 1 && (
+            <nav className="mt-4 d-flex justify-content-center align-items-center gap-3">
+              <button 
+                className="btn btn-outline-primary" 
+                disabled={page === 0} 
+                onClick={() => setPage(p => p - 1)}
+              >
+                ← Previous
+              </button>
+              <span className="text-muted">Page {page + 1} of {totalPages}</span>
+              <button 
+                className="btn btn-outline-primary" 
+                disabled={page >= totalPages - 1} 
+                onClick={() => setPage(p => p + 1)}
+              >
+                Next →
+              </button>
+            </nav>
+          )}
+        </>
       )}
     </div>
   );
